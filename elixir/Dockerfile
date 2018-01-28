@@ -1,5 +1,5 @@
 
-FROM elixir:1.5.2-slim
+FROM elixir:1.6.0-slim
 
 RUN apt-get update && \
     apt-get upgrade -y && \
