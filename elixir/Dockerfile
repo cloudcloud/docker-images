@@ -11,5 +11,4 @@ RUN apt-get update && \
 
 RUN mix local.hex --force && \
     mix local.rebar --force && \
-    mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez
-
+    yes | mix archive.install https://github.com/phoenixframework/archives/raw/master/phx_new.ez
