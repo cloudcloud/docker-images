@@ -7,7 +7,7 @@ RUN apt-get update && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     curl -sL https://deb.nodesource.com/setup_8.x | bash - && \
-    apt-get install -y git inotify-tools build-essential mysql-client postgresql nodejs yarn
+    apt-get install -y git gnupg inotify-tools build-essential mysql-client postgresql nodejs yarn
 
 RUN mix local.hex --force && \
     mix local.rebar --force && \
