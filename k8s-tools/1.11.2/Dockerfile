@@ -4,7 +4,7 @@ FROM python:2-alpine
 # https://stackoverflow.com/questions/34729748/installed-go-binary-not-found-in-path-on-alpine-linux-docker/35613430
 
 RUN apk update && \
-  apk add --no-cache ca-certificates curl openssl tar gnupg bash=4.4.19-rc1 postgresql-client mysql-client grep busybox-extras xz && \
+  apk add --no-cache ca-certificates curl openssl tar gnupg bash postgresql-client mysql-client grep busybox-extras xz && \
   update-ca-certificates && \
   curl -sL https://storage.googleapis.com/kubernetes-release/release/v1.11.2/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl && \
   chmod a+x /usr/local/bin/kubectl && \
