@@ -1,5 +1,5 @@
-FROM golang:1.11-alpine
+FROM golang:1.11-stretch
 
-RUN apk update && \
-    apk add git bash curl
+RUN apt update && \
+    apt install -y git bash curl gcc
 
