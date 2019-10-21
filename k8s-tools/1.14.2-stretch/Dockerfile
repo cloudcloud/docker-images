@@ -3,7 +3,7 @@ FROM python:2-stretch
 RUN apt update && \
   apt-get -y install ca-certificates curl openssl tar gnupg bash postgresql-client mysql-client grep expect && \
   update-ca-certificates && \
-  curl -sL https://storage.googleapis.com/kubernetes-release/release/v1.13.4/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl && \
+  curl -sL https://storage.googleapis.com/kubernetes-release/release/v1.14.2/bin/linux/amd64/kubectl -o /usr/local/bin/kubectl && \
   chmod a+x /usr/local/bin/kubectl && \
   curl -sL https://github.com/shyiko/kubesec/releases/download/0.9.2/kubesec-0.9.2-linux-amd64 -o /usr/local/bin/kubesec && \
   chmod a+x /usr/local/bin/kubesec && \
